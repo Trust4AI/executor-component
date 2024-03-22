@@ -13,72 +13,89 @@ services:
       - .env
     networks:
       - executor-component-network
-  gemma:
-    container_name: gemma
-    image: gemma:latest
+  gemma-2b:
+    container_name: gemma-2b
+    image: gemma-2b:latest
     build: 
       context: ./Ollama
       dockerfile: Dockerfile.predefined-model-modelfile
       args:
-        MODEL_NAME: "gemma"
-        MODELFILE_PATH: "modelfiles/Modelfile-gemma"
+        MODEL_NAME: "gemma-2b"
+        MODELFILE_PATH: "modelfiles/Modelfile-gemma-2b"
     ports:
       - "11434:11434"
     volumes:
-      - gemma_data:/root/.ollama
+      - gemma-2b_data:/root/.ollama
     networks:
       - executor-component-network
-  dolphin-phi:
-    container_name: dolphin-phi
-    image: dolphin-phi:latest
-    build: 
+  gemma-7b:
+    container_name: gemma-7b
+    image: gemma-7b:latest
+    build:
       context: ./Ollama
-      dockerfile: Dockerfile.predefined-model
+      dockerfile: Dockerfile.predefined-model-modelfile
       args:
-        MODEL_NAME: "dolphin-phi"
+        MODEL_NAME: "gemma-7b"
+        MODELFILE_PATH: "modelfiles/Modelfile-gemma-7b"
     ports:
       - "11435:11434"
     volumes:
-      - dolphin-phi_data:/root/.ollama
+      - gemma-7b_data:/root/.ollama
     networks:
       - executor-component-network
-  # mario:
-  #   container_name: mario
-  #   image: mario:latest
-  #   build: 
-  #     context: ./Ollama
-  #     dockerfile: Dockerfile.predefined-model-modelfile
-  #     args:
-  #       MODEL_NAME: "mario"
-  #       MODELFILE_PATH: "modelfiles/Modelfile-mario"
-  #   ports:
-  #     - "11436:11434"
-  #   volumes:
-  #     - mario_data:/root/.ollama
-  #   networks:
-  #     - executor-component-network
-  # mistral:
-  #   container_name: mistral
-  #   image: mistral:latest
-  #   build: 
-  #     context: ./Ollama
-  #     dockerfile: Dockerfile.own-model
-  #     args:
-  #       MODEL_NAME: "mistral"
-  #       MODELFILE_PATH: "modelfiles/Modelfile-mistral"
-  #       MODEL_PATH: "models/mistral-7b-instruct-v0.2.Q2_K.gguf"
-  #   ports:
-  #     - "11437:11434"
-  #   volumes:
-  #     - mistral_data:/root/.ollama
-  #   networks:
-  #     - executor-component-network
+  llama2-7b:
+    container_name: llama2-7b
+    image: llama2-7b:latest
+    build: 
+      context: ./Ollama
+      dockerfile: Dockerfile.predefined-model-modelfile
+      args:
+        MODEL_NAME: "llama2-7b"
+        MODELFILE_PATH: "modelfiles/Modelfile-llama2-7b"
+    ports:
+      - "11436:11434"
+    volumes:
+      - llama2-7b_data:/root/.ollama
+    networks:
+      - executor-component-network
+  llama2-13b:
+    container_name: llama2-13b
+    image: llama2-13b:latest
+    build: 
+      context: ./Ollama
+      dockerfile: Dockerfile.predefined-model-modelfile
+      args:
+        MODEL_NAME: "llama2-13b"
+        MODELFILE_PATH: "modelfiles/Modelfile-llama2-13b"
+    ports:
+      - "11437:11434"
+    volumes:
+      - llama2-13b_data:/root/.ollama
+    networks:
+      - executor-component-network
+  mistral-7b:
+    container_name: mistral-7b
+    image: mistral-7b:latest
+    build: 
+      context: ./Ollama
+      dockerfile: Dockerfile.predefined-model-modelfile
+      args:
+        MODEL_NAME: "mistral-7b"
+        MODELFILE_PATH: "modelfiles/Modelfile-mistral-7b"
+    ports:
+      - "11438:11434"
+    volumes:
+      - mistral-7b_data:/root/.ollama
+    networks:
+      - executor-component-network
+  
 
 volumes:
-  gemma_data:
-  dolphin-phi_data:
-  # mario_data:
-  # mistral_data:
+  gemma-2b_data:
+  gemma-7b_data:
+  llama2-7b_data:
+  llama2-13b_data:
+  mistral-7b_data:
 
 networks:
   executor-component-network:
