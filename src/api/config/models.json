@@ -1,9 +1,5 @@
 {
-    "openai": [
-        "o3-mini",
-        "o4-mini",
-        "gpt-4.1-mini"
-    ],
+    "openai": [],
     "gemini": [
         "gemini-1.5-flash",
         "gemini-1.5-flash-8b",
