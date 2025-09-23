@@ -216,7 +216,6 @@ const modelBaseService = container.resolve('modelBaseService')
  *         response_max_length: 100
  *         list_format_response: true
  *         excluded_text: "Jewish"
- *         format: "text"
  *         temperature: 0.5
  *     Response:
  *       type: object
