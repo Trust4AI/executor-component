@@ -271,10 +271,6 @@ components:
           description: The name of the model to use.
           type: string
           enum:
-            - o1-mini
-            - o3-mini
-            - o4-mini
-            - gpt-4.1-mini
             - gemini-1.5-flash
             - gemini-1.5-flash-8b
             - gemini-2.0-flash
@@ -372,10 +368,6 @@ components:
           description: The name of the model to use.
           type: string
           enum:
-            - o1-mini
-            - o3-mini
-            - o4-mini
-            - gpt-4.1-mini
             - gemini-1.5-flash
             - gemini-1.5-flash-8b
             - gemini-2.0-flash

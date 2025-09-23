@@ -73,7 +73,7 @@ const executorController = new ExecutorController()
  *         model_name:
  *           description: The name of the model to use.
  *           type: string
- *           enum: ["o1-mini", "o3-mini", "o4-mini", "gpt-4.1-mini", "gemini-1.5-flash", "gemini-1.5-flash-8b", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-2.0-flash-thinking-exp-01-21", "gemini-2.5-flash-preview-04-17"]
+ *           enum: ["gemini-1.5-flash", "gemini-1.5-flash-8b", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-2.0-flash-thinking-exp-01-21", "gemini-2.5-flash-preview-04-17"]
  *           example: "gemini-1.5-flash"
  *         prompt_1:
  *           description: The first prompt to execute on the model.
