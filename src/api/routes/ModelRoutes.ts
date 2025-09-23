@@ -168,7 +168,7 @@ const modelBaseService = container.resolve('modelBaseService')
  *         model_name:
  *           description: The name of the model to use.
  *           type: string
- *           enum: ["gemini-1.5-flash", "gemini-1.5-flash-8b", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-2.0-flash-thinking-exp-01-21", "gemini-2.5-flash-preview-04-17"]
+ *           enum: ["gemini-1.5-flash", "gemini-1.5-flash-8b", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-2.0-flash-thinking-exp-01-21", "gemini-2.5-flash"]
  *           example: "gemini-1.5-flash"
  *         system_prompt:
  *           description: The system prompt to execute on the model.
