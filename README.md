@@ -48,7 +48,7 @@ Local deployment is ideal for development and testing purposes. It allows you to
 Before you begin, ensure you have the following software installed on your machine:
 
 - [Node.js](https://nodejs.org/en/download/package-manager/current) (version 16.x or newer is recommended)
-- [Ollama](https://ollama.com/download)
+- [Ollama](https://ollama.com/download) (version 0.6.0 is recommended)
 
 Additionally, you need to download the models that will be used. You can download them from the [Ollama model library](https://ollama.com/library) using the following command.
 
